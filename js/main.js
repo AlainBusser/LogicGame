@@ -2,11 +2,11 @@
 (function() {
   var A, B, C, a, b, c, faireQCM, liste, ordre, qA, qB, rB, rC, ref, sol1, sol2, soln, type;
 
-  type = 0;
+  type = Math.floor(Math.random() * 6);
 
   ref = [0, 0, 0], a = ref[0], b = ref[1], c = ref[2];
 
-  ordre = [[a, b, b, c], [a, b, c, b], [a, b, b, c], [a, b, c, b], [b, a, c, b], [a, b, c, b]];
+  ordre = [[0, 1, 1, 2], [0, 1, 2, 1], [0, 1, 1, 2], [0, 1, 2, 1], [1, 0, 2, 1], [0, 1, 2, 1]];
 
   qA = ["Tous les", "Tous les", "Quelques", "Quelques", "Aucun des", "Quelques"];
 
@@ -14,17 +14,17 @@
 
   qB = ["tous les", "aucun des", "tous les", "aucun des", "tous les", "tous les"];
 
-  rC = ["sont des", "ne sont des", "ne sont pas des", "ne sont des", "sont des", "tous les"];
+  rC = ["sont des", "ne sont des", "sont", "ne sont des", "sont des", "sont des"];
 
-  A = ["suspect", "policier", "juge", "avocat", "chauffeur", "majordome"];
+  A = ["suspect", "policier", "juge", "avocat", "chauffeur", "majordome", "détective", "greffier"];
 
-  B = ["noir", "arabe", "étranger", "bavard", "fumeur", "muet"];
+  B = ["noir", "arabe", "étranger", "bavard", "fumeur", "muet", "gangster", "politicien"];
 
-  C = ["gentil", "coupable", "malin", "imbécile", "innocent", "méchant"];
+  C = ["gentil", "coupable", "malin", "imbécile", "innocent", "méchant", "escroc", "prisonnier"];
 
   liste = [A, B, C];
 
-  soln = [[a, c], [a, c], [a, c], [a, c], [a, c], [a, c]];
+  soln = [[0, 2], [0, 2], [0, 2], [0, 2], [0, 2], [0, 2]];
 
   sol1 = ["Tous les", "Aucun des", "Quelques", "Quelques", "Aucun des", "Quelques"];
 
@@ -32,9 +32,10 @@
 
   faireQCM = function() {
     var aleat;
-    aleat = [Math.floor(Math.random() * 6), Math.floor(Math.random() * 6), Math.floor(Math.random() * 6)];
+    aleat = [Math.floor(Math.random() * 8), Math.floor(Math.random() * 8), Math.floor(Math.random() * 8)];
     $("#probleme1").text(qA[type] + " " + liste[ordre[type][0]][aleat[ordre[type][0]]] + "s " + rB[type] + " " + liste[ordre[type][1]][aleat[ordre[type][1]]] + "s");
     $("#probleme2").text(qB[type] + " " + liste[ordre[type][2]][aleat[ordre[type][2]]] + "s " + rC[type] + " " + liste[ordre[type][3]][aleat[ordre[type][3]]] + "s");
+    $("#sortie").text(sol1[type] + " " + liste[soln[type][0]][aleat[soln[type][0]]] + "s " + sol2[type] + " " + liste[soln[type][1]][aleat[soln[type][1]]] + "s");
     return true;
   };
 
