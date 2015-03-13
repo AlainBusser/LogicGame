@@ -36,6 +36,8 @@
     $("#probleme1").text(qA[type] + " " + liste[ordre[type][0]][aleat[ordre[type][0]]] + "s " + rB[type] + " " + liste[ordre[type][1]][aleat[ordre[type][1]]] + "s");
     $("#probleme2").text(qB[type] + " " + liste[ordre[type][2]][aleat[ordre[type][2]]] + "s " + rC[type] + " " + liste[ordre[type][3]][aleat[ordre[type][3]]] + "s");
     $("#sortie").text(sol1[type] + " " + liste[soln[type][0]][aleat[soln[type][0]]] + "s " + sol2[type] + " " + liste[soln[type][1]][aleat[soln[type][1]]] + "s");
+    $(".sA").text(" " + liste[soln[type][0]][aleat[soln[type][0]]] + "s ");
+    $(".sC").text(" " + liste[soln[type][1]][aleat[soln[type][1]]] + "s");
     return true;
   };
 

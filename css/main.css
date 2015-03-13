@@ -51,6 +51,7 @@ textarea {
     padding: 0.2em 0;
 }
 
+.carre { width: 80px; height: 80px; text-align: center; }
 .cellule { width: 40px; height: 40px; }
 .nord { border-top: 3px solid black; }
 .sud { border-bottom: 3px solid black; }
@@ -67,6 +68,9 @@ textarea {
 .rouge { background-color: red; }
 .gris { background-color: gray; }
 
+h1 { color: darkred; text-shadow: 3px 3px 4px gray; }
+h2 { color: darkblue; text-shadow: 3px 3px 4px gray; }
+h3 { color: darkcyan; text-shadow: 3px 3px 4px gray; }
 
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
