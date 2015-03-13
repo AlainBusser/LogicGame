@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Logic game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		    <link rel="shortcut icon"href="favicon.ico">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">Puzzle logique de Lewis Carroll</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">maison</a></li>
+                        <li><a href="#">descriptions</a></li>
+                        <li><a href="#">prémisses</a></li>
+                        <li><a href="#">conclusions</a></li>
+                        <li><a href="#">syllogismes</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>Jeu des syllogismes</h1>
+                        <p>Le <a href="http://www.gutenberg.org/files/4763/4763-h/4763-h.htm">jeu de Lewis Carroll</a> permet de résoudre des <a href="http://fr.wikipedia.org/wiki/Syllogisme">syllogismes</a> comme ceux d'<a href="http://fr.wikipedia.org/wiki/Aristote">Aristote</a></p>
+                    </header>
+                    <section>
+                        <h2 id="énoncé">Syllogisme à résoudre</h2>
+                        <p>Lors d'une séance au tribunal, le détective Charlie Kholmes constate que :
+                      <ul>
+                        <li id="probleme1"></li>
+                        <li id="probleme2"></li>
+                      </ul>
+                      <h5>Que peut-il en déduire ?</h5>
+                      </p>
+                    </section>
+                    <section>
+                        <h2>Le plateau de jeu</h2>
+                      <p>Le carré central représente les <span class="sB"></span>.</p>
+                        <p>
+                          <table>
+                            <tr>
+                              <td></td>
+                              <td>
+                                <table><tr>
+                                  <td class="carre"><span class="sC"></span></td>
+                                  <td class="carre">   pas <span class="sC"></span></td></tr>
+                                </table>
+                              </td>
+                            </tr>
+                          <tr>
+                            <td>
+                              <table>
+                                <tr><td class="carre"><span class="sA"></span></td></tr>
+                                <tr><td class="carre">pas <span class="sA"></span></td></tr>
+                              </table>
+                          <td>
+                          <!-- codage:
+                              prem0 pour prémisse fausse
+                              prem1 pour prmisse vraie
+                              prem2 prem3 pour indéterminé (jeton à cheval)
+                              conc0 conc1 etc pour la conclusion
+                              mid0 mid1 etc pour le terme intermédiaire (midterm)
+                              -->
+                          <table id="plateau">
+                            <tr>
+                              <td class="cellule ouest nord" id="prem1conc1mid0"></td>
+                              <td class="cellule nord sud est" id="prem1conc2mid0"></td>
+                              <td class="cellule nord sud ouest" id="prem1conc3mid0"></td>
+                              <td class="cellule est nord" id="exthautdroit"></td>
+                            </tr>
+                            <tr>
+                              <td class="cellule est sud ouest" id="prem2conc1mid0"></td>
+                              <td class="cellule nord sud est ouest" id="prem1conc1mid1"></td>
+                              <td class="cellule nord sud est ouest" id="prem1conc0mid0"></td>
+                              <td class="cellule ouest sud est" id="prem2conc0mid0"></td>
+                            </tr>
+                            <tr>
+                              <td class="cellule ouest nord est" id="prem3conc1mid0"></td>
+                              <td class="cellule nord sud est ouest" id="prem0conc1mid1"></td>
+                              <td class="cellule nord sud est ouest" id="prem0conc0mid1"></td>
+                              <td class="cellule ouest nord est" id="prem3conc0mid0"></td>
+                            </tr>
+                            <tr>
+                              <td class="cellule ouest sud" id="prem0conc1mid0"></td>
+                              <td class="cellule nord sud est" id="prem0conc2mid0"></td>
+                              <td class="cellule nord sud ouest" id="prem0conc3mid0"></td>
+                              <td class="cellule sud est" id="prem0conc0mid0"></td>
+                            </tr>
+                      </table>
+                      </td></tr></table>
+                      </p>
+                    <p>
+                      <div class="jeton rouge"></div>
+                      <div class="jeton rouge"></div>
+                      <div class="jeton rouge"></div>
+                      <div class="jeton rouge"></div>
+                      </p>
+                    <p>
+                      <div class="jeton gris"></div>
+                      <div class="jeton gris"></div>
+                      <div class="jeton gris"></div>
+                      <div class="jeton gris"></div>
+                      <div class="jeton gris"></div>
+                      </p>
+                    </section>
+                    <footer>
+                        <h3>La conclusion du syllogisme</h3>
+                      <p><h5>La solution du syllogisme est</h5>
+                      <select name="proposition">
+                          <option value="solution0">Tous les <span class="sA"></span> sont des <span class="sC"></span>.</option>
+                          <option value="solution1">Quelques <span class="sA"></span> sont des <span class="sC"></span></option>
+                          <option value="solution2">Aucun des <span class="sA"></span> ne sont des <span class="sC"></span></option>
+                          <option value="solution3">Quelques <span class="sA"></span> ne sont pas des <span class="sC"></span></option>
+                          <option value="solution4">Aucun des <span class="sA"></span> ne sont des <span class="sC"></span></option>
+                          <option value="solution5">Quelques <span class="sA"></span> ne sont pas des <span class="sC"></span></option>
+                      </select>
+                      </p>
+                      <p id="sortie"></p>
+                    </footer>
+                </article>
+
+                <aside>
+                    <h3>Règle du jeu</h3>
+                    <p>Placer les jetons comme on a vu auparavant, pour représenter la prémisse horizontalement et la conclusion verticalement. La proposition intermédiaire est localisée au centre du tableau si elle est vraie, au pourtour si elle est fausse. On constate que si un jeton rouge est à cheval entre deux cases, il peut être poussé vers l'une des deux cases par l'arrivée ultérieure d'un jeton gris. Quand les jetons ont tous été placés ou déplacés, proposer une solution du syllogisme avec le menu déroulant.</p>
+                </aside>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h5>Alain Busser 2015</h5>
+            </footer>
+        </div>
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'); document.write('<script src="js/vendor/jquery-ui.js"><\/script>'); document.write('<script src="js/vendor/jquery.ui.touch-punch.js"><\/script>')</script>
+
+        <script src="js/logic5.js"></script>
+    </body>
+</html>
