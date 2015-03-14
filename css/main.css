@@ -51,6 +51,8 @@ textarea {
     padding: 0.2em 0;
 }
 
+.ui-selectmenu-text { font-size: 64%; }
+
 .carre { width: 80px; height: 80px; text-align: center; }
 .cellule { width: 40px; height: 40px; }
 .nord { border-top: 3px solid black; }
