@@ -52,14 +52,14 @@
         if ui.draggable.hasClass 'gris'
           if debut is 1 # on est en haut
             if milieu is 1 # on est à gauche du tableau
-              textsortie = "Le dernier jeton code le fait qu'aucun #{trad[debut]}#{A[aleat[0]]} n'est #{B[aleat[1]]}"
+              textsortie = "Le dernier jeton code le fait qu'aucun #{A[aleat[0]]} n'est #{B[aleat[1]]}"
             else
-              textsortie = "Le dernier jeton code le fait que tous les #{trad[debut]}#{A[aleat[0]]}s sont #{B[aleat[1]]}s"
+              textsortie = "Le dernier jeton code le fait que tous les #{A[aleat[0]]}s sont #{B[aleat[1]]}s"
           else
             if milieu is 1 # on est à gauche du tableau
-              textsortie = "Le dernier jeton code le fait que tous les #{B[aleat[1]]}s sont #{trad[debut]}#{A[aleat[0]]}s"
+              textsortie = "Le dernier jeton code le fait que tous les #{B[aleat[1]]}s sont #{A[aleat[0]]}s"
             else
-              textsortie = "Le dernier jeton code le fait que tous le monde est #{A[aleat[0]]} ou #{B[aleat[1]]}"
+              textsortie = "Le dernier jeton code le fait que tout le monde est #{A[aleat[0]]} ou #{B[aleat[1]]}"
         else # si le jeton n'est pas gris c'est qu'il est rouge
             if milieu is 1 # on est à gauche du tableau
               if debut is 1 # on est en haut

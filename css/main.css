@@ -54,7 +54,7 @@ textarea {
 .ui-selectmenu-text { font-size: 64%; }
 
 .carre { width: 80px; height: 80px; text-align: center; }
-.cellule { width: 40px; height: 40px; background-color: #ffddbb; }
+.cellule { width: 40px; height: 40px; background-color: #ffeecc; }
 .nord { border-top: 3px solid black; }
 .sud { border-bottom: 3px solid black; }
 .est { border-right: 3px solid black; }

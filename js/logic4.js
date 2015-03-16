@@ -16,7 +16,7 @@
 
   A = ["suspect", "policier", "juge", "avocat", "chauffeur", "majordome", "détective", "greffier"];
 
-  B = ["noir", "arabe", "étranger", "bavard", "fumeur", "muet", "gangster", "politicien"];
+  B = ["noir", "blanc", "ripou", "bavard", "fumeur", "muet", "gangster", "politicien"];
 
   C = ["gentil", "coupable", "malin", "imbécile", "innocent", "méchant", "escroc", "prisonnier"];
 

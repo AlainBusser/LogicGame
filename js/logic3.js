@@ -52,15 +52,15 @@
         if (ui.draggable.hasClass('gris')) {
           if (debut === 1) {
             if (milieu === 1) {
-              textsortie = "Le dernier jeton code le fait qu'aucun " + trad[debut] + A[aleat[0]] + " n'est " + B[aleat[1]];
+              textsortie = "Le dernier jeton code le fait qu'aucun " + A[aleat[0]] + " n'est " + B[aleat[1]];
             } else {
-              textsortie = "Le dernier jeton code le fait que tous les " + trad[debut] + A[aleat[0]] + "s sont " + B[aleat[1]] + "s";
+              textsortie = "Le dernier jeton code le fait que tous les " + A[aleat[0]] + "s sont " + B[aleat[1]] + "s";
             }
           } else {
             if (milieu === 1) {
-              textsortie = "Le dernier jeton code le fait que tous les " + B[aleat[1]] + "s sont " + trad[debut] + A[aleat[0]] + "s";
+              textsortie = "Le dernier jeton code le fait que tous les " + B[aleat[1]] + "s sont " + A[aleat[0]] + "s";
             } else {
-              textsortie = "Le dernier jeton code le fait que tous le monde est " + A[aleat[0]] + " ou " + B[aleat[1]];
+              textsortie = "Le dernier jeton code le fait que tout le monde est " + A[aleat[0]] + " ou " + B[aleat[1]];
             }
           }
         } else {

@@ -11,7 +11,7 @@
   rC = ["sont des","ne sont des","sont","ne sont des","sont des","sont des"]
   # 8 catégories socioprofessionnelles, on peut augmenter
   A = ["suspect","policier","juge","avocat","chauffeur","majordome","détective","greffier"]
-  B = ["noir","arabe","étranger","bavard","fumeur","muet","gangster","politicien"]
+  B = ["noir","blanc","ripou","bavard","fumeur","muet","gangster","politicien"]
   C = ["gentil","coupable","malin","imbécile","innocent","méchant","escroc","prisonnier"]
   liste = [A,B,C]
   sol1 = ["Il n'y a pas de","Il n'y a que des"]

@@ -50,27 +50,15 @@
         milieu = parseInt diagnostic[1]
         fin = parseInt diagnostic[0]
         if ui.draggable.hasClass 'gris'
-          if debut is 1 # on est en haut
-            if milieu is 1 # on est à gauche du tableau
-              textsortie = "Le dernier jeton code le fait qu'aucun #{trad[debut]}#{A[aleat[0]]} n'est #{B[aleat[1]]}"
+          if debut is 1 # on est à gauche
+              textsortie = "Le dernier jeton code le fait qu'il n'y a pas de #{A[aleat[0]]}"
             else
-              textsortie = "Le dernier jeton code le fait que tous les #{trad[debut]}#{A[aleat[0]]}s sont #{B[aleat[1]]}s"
-          else
-            if milieu is 1 # on est à gauche du tableau
-              textsortie = "Le dernier jeton code le fait que tous les #{B[aleat[1]]}s sont #{trad[debut]}#{A[aleat[0]]}s"
-            else
-              textsortie = "Le dernier jeton code le fait que tous le monde est #{A[aleat[0]]} ou #{B[aleat[1]]}"
+              textsortie = "Le dernier jeton code le fait qu'il n'y a que des #{A[aleat[0]]}s"
         else # si le jeton n'est pas gris c'est qu'il est rouge
-            if milieu is 1 # on est à gauche du tableau
-              if debut is 1 # on est en haut
-                textsortie = "Le dernier jeton code le fait qu'il existe un #{A[aleat[0]]} #{B[aleat[1]]}"
+              if debut is 1 # on est à gauche
+                textsortie = "Le dernier jeton code le fait qu'il existe un #{A[aleat[0]]}"
               else
-                textsortie = "Le dernier jeton code le fait qu'il existe un #{B[aleat[1]]} qui n'est pas #{A[aleat[0]]}"
-            else # on est à droite
-              if debut is 1 # on est en haut
-                textsortie = "Le dernier jeton code le fait qu'il existe un #{A[aleat[0]]} qui n'est pas #{B[aleat[1]]}"
-              else
-                textsortie = "Le dernier jeton code le fait qu'il existe quelqu'un qui n'est ni  #{B[aleat[1]]}, ni #{A[aleat[0]]}"
+                textsortie = "Le dernier jeton code le fait qu'il existe quelqu'un qui n'est pas #{A[aleat[0]]}"
               
         $('#sortie').text textsortie
         true
