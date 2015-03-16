@@ -54,11 +54,23 @@ textarea {
 .ui-selectmenu-text { font-size: 64%; }
 
 .carre { width: 80px; height: 80px; text-align: center; }
-.cellule { width: 40px; height: 40px; }
+.cellule { width: 40px; height: 40px; background-color: #ffddbb; }
 .nord { border-top: 3px solid black; }
 .sud { border-bottom: 3px solid black; }
 .est { border-right: 3px solid black; }
 .ouest { border-left: 3px solid black; }
+.nordR { border-top: 3px solid red; }
+.sudR { border-bottom: 3px solid red; }
+.estR { border-right: 3px solid red; }
+.ouestR { border-left: 3px solid red; }
+.nordB { border-top: 3px solid blue; }
+.sudB { border-bottom: 3px solid blue; }
+.estB { border-right: 3px solid blue; }
+.ouestB { border-left: 3px solid blue; }
+.nordV { border-top: 3px solid green; }
+.sudV { border-bottom: 3px solid green; }
+.estV { border-right: 3px solid green; }
+.ouestV { border-left: 3px solid green; }
 
 .jeton { width: 32px; height: 32px; 
   border-radius: 50%; 

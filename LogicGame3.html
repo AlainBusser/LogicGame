@@ -24,7 +24,7 @@
                 <nav>
                     <ul>
                         <li><a href="LogicGame1.html">maison</a></li>
-                        <li><a href="LogicGame2.html">descriptions</a></li>
+                        <li><a href="LogicGame2.html">univers</a></li>
                         <li><a href="LogicGame3.html">prémisses</a></li>
                         <li><a href="LogicGame4.html">conclusions</a></li>
                         <li><a href="LogicGame5.html">syllogismes</a></li>
@@ -38,12 +38,11 @@
 
                 <article>
                     <header>
-                        <h1>Autre codage des propositions</h1>
-                        <p>Le tableau précédent est déformé mais le principe reste le même</p>
+                        <h1>Codage des propositions</h1>
+                        <p>Une proposition (prémisse ou conclusion d'un syllogisme) peut être codée par des jetons dans un tableau comme celui ci-dessous; ici le haut du tableau représente les <span class="sA"></span> et la moitié gauche du tableau représente les <span class="sC"></span> :</p>
                     </header>
                     <section>
-                        <h2>Le tableau déformé</h2>
-                      <p>Le carré central représente les <span class="sB"></span>.</p>
+                        <h2>Le tableau carré</h2>
                           <table>
                             <tr>
                               <td></td>
@@ -58,32 +57,28 @@
                             <td>
                               <table>
                                 <tr><td class="carre"><span class="sA"></span></td></tr>
-                                <tr><td class="carre"><span class="sA"></span></td></tr>
+                                <tr><td class="carre">pas <span class="sA"></span></td></tr>
                               </table>
                           <td>
                           <!-- codage:
-                              prem0 à gauche et à droite du tableau (bords)
-                              prem1 au centre en haut pour gérer les ambiguïtés
-                              conc0 à droite du tableau
-                              conc1 à gauche du tableau
-                              mid0 sur le bord et mid1 pour les deux cases du centre
+                              prem0 en bas
+                              prem1 en haut
+                              mid0 à droite et mid1 à gauche
                               -->
                           <table id="plateau">
                             <tr>
-                              <td class="cellule ouest nord" id="prem0conc1mid0"></td>
-                              <td class="cellule nord sud est" id="prem1conc1mid0"></td>
-                              <td class="cellule nord sud ouest" id="prem1conc0mid0"></td>
-                              <td class="cellule est nord" id="prem0conc0mid0"></td>
+                              <td class="cellule nord sud est ouest" id="prem1conc1mid1"></td>
+                              <td class="cellule nord sud est ouest" id="prem1conc1mid0"></td>
                             </tr>
                             <tr>
-                              <td class="cellule est sud ouest" id="prem0conc1mid0"></td>
                               <td class="cellule nord sud est ouest" id="prem0conc1mid1"></td>
-                              <td class="cellule nord sud est ouest" id="prem0conc0mid1"></td>
-                              <td class="cellule ouest sud est" id="prem0conc0mid0"></td>
+                              <td class="cellule nord sud est ouest" id="prem0conc1mid0"></td>
                             </tr>
                       </table>
                       </td></tr></table>
                       <p></p>
+                      <div class="jeton rouge"></div>
+                      <div class="jeton rouge"></div>
                       <div class="jeton rouge"></div>
                       <div class="jeton rouge"></div>
                      <p> </p>
@@ -100,15 +95,34 @@
 
                 <aside>
                         <h2 id="énoncé">Pour aller plus loin</h2>
-                        <p>Dans le chapitre suivant, on utilise</p>
-                      <ul>
-                        <li>le tableau précédent comme tableau central</li>
-                        <li>ce tableau comme moitié du haut</li>
-                      </ul>
-                      <h5>On pourra alors résoudre des syllogismes</h5>
-                  <p>en attendant,</p>
-                  <h4>Essayer de représenter la proposition suivante :</h4>
-                  <h3 id="question"></h3>
+                  <p>Dans <a href="LogicGame4.html">le chapitre suivant</a>, le tableau sera déformé en courbant le trait horizontal du milieu de telle façon que le trait du bas soit plié en deux :</p>
+                  <p>De </p>
+                  <table>
+                    <tr>
+                      <td class="cellule ouestB nordB est sudR"></td>
+                      <td class="cellule ouest nordV estV sudR"></td>
+                    </tr>
+                    <tr>
+                      <td class="cellule ouest nordR est sud"></td>
+                      <td class="cellule ouest nordR est sud"></td>
+                    </tr>
+                  </table>
+                  <p>on passera à </p>
+                          <table>
+                            <tr>
+                              <td class="cellule ouestB nordB"></td>
+                              <td class="cellule nordB sudR est"></td>
+                              <td class="cellule nordV sudR ouest"></td>
+                              <td class="cellule estV nordV"></td>
+                            </tr>
+                            <tr>
+                              <td class="cellule estR sudB ouestB"></td>
+                              <td class="cellule nordR sud est ouest"></td>
+                              <td class="cellule nordR sud estR ouest"></td>
+                              <td class="cellule ouestR sudV estV"></td>
+                            </tr>
+                      </table>
+                  <h5>Dans <a href="LogicGame5">le dernier chapitre</a>, on combinera les deux manières de faire un tableau pour représenter deux propositions et résoudre des syllogismes</h5>
                 </aside>
 
             </div> <!-- #main -->
