@@ -23,9 +23,9 @@
                 <h1 class="title">Puzzle logique de Lewis Carroll</h1>
                 <nav>
                     <ul>
-                        <li><a href="#">maison</a></li>
-                        <li><a href="#">descriptions</a></li>
-                        <li><a href="#">prémisses</a></li>
+                        <li><a href="LogicGame1.html">maison</a></li>
+                        <li><a href="LogicGame2.html">descriptions</a></li>
+                        <li><a href="LogicGame3.html">prémisses</a></li>
                         <li><a href="LogicGame4.html">conclusions</a></li>
                         <li><a href="LogicGame5.html">syllogismes</a></li>
                     </ul>
@@ -62,24 +62,24 @@
                               </table>
                           <td>
                           <!-- codage:
-                              prem0 pour prémisse fausse
-                              prem1 pour prmisse vraie
-                              prem2 prem3 pour indéterminé (jeton à cheval)
-                              conc0 conc1 etc pour la conclusion
-                              mid0 mid1 etc pour le terme intermédiaire (midterm)
+                              prem0 à gauche et à droite du tableau (bords)
+                              prem1 au centre en haut pour gérer les ambiguïtés
+                              conc0 à droite du tableau
+                              conc1 à gauche du tableau
+                              mid0 sur le bord et mid1 pour les deux cases du centre
                               -->
                           <table id="plateau">
                             <tr>
-                              <td class="cellule ouest nord" id="prem1conc1mid0"></td>
-                              <td class="cellule nord sud est" id="prem1conc2mid0"></td>
-                              <td class="cellule nord sud ouest" id="prem1conc3mid0"></td>
-                              <td class="cellule est nord" id="prem1conc0mid0"></td>
+                              <td class="cellule ouest nord" id="prem0conc1mid0"></td>
+                              <td class="cellule nord sud est" id="prem1conc1mid0"></td>
+                              <td class="cellule nord sud ouest" id="prem1conc0mid0"></td>
+                              <td class="cellule est nord" id="prem0conc0mid0"></td>
                             </tr>
                             <tr>
-                              <td class="cellule est sud ouest" id="prem2conc1mid0"></td>
-                              <td class="cellule nord sud est ouest" id="prem1conc1mid1"></td>
-                              <td class="cellule nord sud est ouest" id="prem1conc0mid1"></td>
-                              <td class="cellule ouest sud est" id="prem2conc0mid0"></td>
+                              <td class="cellule est sud ouest" id="prem0conc1mid0"></td>
+                              <td class="cellule nord sud est ouest" id="prem0conc1mid1"></td>
+                              <td class="cellule nord sud est ouest" id="prem0conc0mid1"></td>
+                              <td class="cellule ouest sud est" id="prem0conc0mid0"></td>
                             </tr>
                       </table>
                       </td></tr></table>
@@ -106,6 +106,9 @@
                         <li>ce tableau comme moitié du haut</li>
                       </ul>
                       <h5>On pourra alors résoudre des syllogismes</h5>
+                  <p>en attendant,</p>
+                  <h4>Essayer de représenter la proposition suivante :</h4>
+                  <h3 id="question"></h3>
                 </aside>
 
             </div> <!-- #main -->

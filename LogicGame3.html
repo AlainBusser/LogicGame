@@ -38,11 +38,11 @@
 
                 <article>
                     <header>
-                        <h1>Jeu des syllogismes</h1>
-                        <p>Le <a href="http://www.gutenberg.org/files/4763/4763-h/4763-h.htm">jeu de Lewis Carroll</a> permet de résoudre des <a href="http://fr.wikipedia.org/wiki/Syllogisme">syllogismes</a> comme ceux d'<a href="http://fr.wikipedia.org/wiki/Aristote">Aristote</a></p>
+                        <h1>Autre codage des propositions</h1>
+                        <p>Le tableau précédent est déformé mais le principe reste le même</p>
                     </header>
                     <section>
-                        <h2>Le plateau de jeu</h2>
+                        <h2>Le tableau déformé</h2>
                       <p>Le carré central représente les <span class="sB"></span>.</p>
                           <table>
                             <tr>
@@ -58,46 +58,32 @@
                             <td>
                               <table>
                                 <tr><td class="carre"><span class="sA"></span></td></tr>
-                                <tr><td class="carre">pas <span class="sA"></span></td></tr>
+                                <tr><td class="carre"><span class="sA"></span></td></tr>
                               </table>
                           <td>
                           <!-- codage:
-                              prem0 pour prémisse fausse
-                              prem1 pour prmisse vraie
-                              prem2 prem3 pour indéterminé (jeton à cheval)
-                              conc0 conc1 etc pour la conclusion
-                              mid0 mid1 etc pour le terme intermédiaire (midterm)
+                              prem0 à gauche et à droite du tableau (bords)
+                              prem1 au centre en haut pour gérer les ambiguïtés
+                              conc0 à droite du tableau
+                              conc1 à gauche du tableau
+                              mid0 sur le bord et mid1 pour les deux cases du centre
                               -->
                           <table id="plateau">
                             <tr>
-                              <td class="cellule ouest nord" id="prem1conc1mid0"></td>
-                              <td class="cellule nord sud est" id="prem1conc2mid0"></td>
-                              <td class="cellule nord sud ouest" id="prem1conc3mid0"></td>
-                              <td class="cellule est nord" id="prem1conc0mid0"></td>
+                              <td class="cellule ouest nord" id="prem0conc1mid0"></td>
+                              <td class="cellule nord sud est" id="prem1conc1mid0"></td>
+                              <td class="cellule nord sud ouest" id="prem1conc0mid0"></td>
+                              <td class="cellule est nord" id="prem0conc0mid0"></td>
                             </tr>
                             <tr>
-                              <td class="cellule est sud ouest" id="prem2conc1mid0"></td>
-                              <td class="cellule nord sud est ouest" id="prem1conc1mid1"></td>
-                              <td class="cellule nord sud est ouest" id="prem1conc0mid1"></td>
-                              <td class="cellule ouest sud est" id="prem2conc0mid0"></td>
-                            </tr>
-                            <tr>
-                              <td class="cellule ouest nord est" id="prem3conc1mid0"></td>
+                              <td class="cellule est sud ouest" id="prem0conc1mid0"></td>
                               <td class="cellule nord sud est ouest" id="prem0conc1mid1"></td>
                               <td class="cellule nord sud est ouest" id="prem0conc0mid1"></td>
-                              <td class="cellule ouest nord est" id="prem3conc0mid0"></td>
-                            </tr>
-                            <tr>
-                              <td class="cellule ouest sud" id="prem0conc1mid0"></td>
-                              <td class="cellule nord sud est" id="prem0conc2mid0"></td>
-                              <td class="cellule nord sud ouest" id="prem0conc3mid0"></td>
-                              <td class="cellule sud est" id="prem0conc0mid0"></td>
+                              <td class="cellule ouest sud est" id="prem0conc0mid0"></td>
                             </tr>
                       </table>
                       </td></tr></table>
                       <p></p>
-                      <div class="jeton rouge"></div>
-                      <div class="jeton rouge"></div>
                       <div class="jeton rouge"></div>
                       <div class="jeton rouge"></div>
                      <p> </p>
@@ -105,31 +91,24 @@
                       <div class="jeton gris"></div>
                       <div class="jeton gris"></div>
                       <div class="jeton gris"></div>
-                      <div class="jeton gris"></div>
                     </section>
                     <footer>
-                        <h3>La conclusion du syllogisme</h3>
-                      <h5>La solution du syllogisme est</h5>
-                      <select id="proposition">
-                          <option id="o0" value="solution0">Tous les syllogismes sont compliqués</option>
-                          <option id="o1" value="solution1">Certains syllogismes sont amusants</option>
-                          <option id="o2" value="solution2">Aucun syllogisme n'est logique</option>
-                          <option id="o3" value="solution3">Lewis Carroll n'est pas un syllogisme</option>
-                          <option selected="selected" id="o4" value="solution4">Aucune conclusion n'est possible</option>
-                      </select>
+                        <h3>proposition représentée</h3>
                       <p id="sortie"></p>
                     </footer>
                 </article>
 
                 <aside>
-                        <h2 id="énoncé">Syllogisme à résoudre</h2>
-                  <img src="img/detective.png" alt="Lewis Carroll en détective">
-                        <p>Lors d'une séance au tribunal, le détective Carroll Holmes constate que :</p>
+                        <h2 id="énoncé">Pour aller plus loin</h2>
+                        <p>Dans le chapitre suivant, on utilise</p>
                       <ul>
-                        <li id="probleme1"></li>
-                        <li id="probleme2"></li>
+                        <li>le tableau précédent comme tableau central</li>
+                        <li>ce tableau comme moitié du haut</li>
                       </ul>
-                      <h5>Que peut-il en déduire ?</h5>
+                      <h5>On pourra alors résoudre des syllogismes</h5>
+                  <p>en attendant,</p>
+                  <h4>Essayer de représenter la proposition suivante :</h4>
+                  <h3 id="question"></h3>
                 </aside>
 
             </div> <!-- #main -->
@@ -143,6 +122,6 @@
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>'); document.write('<script src="js/vendor/jquery-ui.js"><\/script>'); document.write('<script src="js/vendor/jquery.ui.touch-punch.js"><\/script>')</script>
 
-        <script src="js/logic5.js"></script>
+        <script src="js/logic3.js"></script>
     </body>
 </html>

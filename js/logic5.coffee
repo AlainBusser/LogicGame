@@ -49,7 +49,7 @@
         if choix is 4
           alert "Si, si, ce syllogisme a une solution !"
         else
-          if type is choix or (type>3 and type is choix+2)
+          if type is choix or (type>3 and type is choix+3)
             alert "Bravo, la conclusion est effectivement que : \n #{sol1[choix]} #{A[aleat[0]]}s #{sol2[choix]} #{C[aleat[2]]}s"
           else
             alert "Non, la conclusion du syllogisme n'est pas que :\n #{sol1[choix]} #{A[aleat[0]]}s #{sol2[choix]} #{C[aleat[2]]}s"
