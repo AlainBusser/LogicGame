@@ -1,0 +1,48 @@
+RAISONNEMENT PSYCHO...LOGIQUE?
+Guy Politzer, chercheur au CNRS, à l’institut Jean-Nicod, Paris
+Jean-François Bonnefon, chercheur au CNRS, au laboratoire Travail et Cognition, université de Toulouse-2
+
+Nos raisonnements de tous les jours s’écartent de la logique classique. La raison tient à l’usage d’une mémoire, dite de travail, à capacité limitée, à l’interprétation parfois ambiguë des énoncés et à des sous-entendus contenus dans nos déclarations quotidiennes.
+
+Compléter sa déclaration annuelle de revenus est source de perplexité. Cette année, la question qui a embarrassé le plus grand nombre est la suivante : 
+
+« Si, au 1er janvier 2005, aucune de vos résidences n'est équipée d'un appareil récepteur de télévision, cochez la case. » 
+
+Aussi troublante est l'instruction : 
+
+« Ne remplissez ce cadre que si votre situation est fausse ou incomplète. » 
+
+En revanche, la question 
+
+« Si votre situation est fausse ou incomplète, indiquez toutes les personnes à charge » 
+
+ne l'est pas. Pourquoi ?
+
+De manière générale, sommes-nous rationnels ? Sommes-nous logiques ? Et si nous ne le sommes pas toujours, pourquoi ? La psychologie du raisonnement s'est développée pour répondre à ces questions fondamentales. Elle explique aussi nos difficultés à compléter un formulaire administratif !
+Sommes-nous rationnels ?
+
+L'être humain se définit comme un être rationnel. De fait, le thème de la rationalité préoccupe philosophes et logiciens depuis l'Antiquité, puis plus récemment les économistes et les psychologues cliniciens, et enfin les psychologues de la cognition.
+
+La rationalité concerne plusieurs activités mentales. Nous pouvons être rationnels ou irrationnels dans nos préférences et nos choix. Par exemple, si la petite Marie préfère les bonbons aux billes, les billes aux toupies, et les toupies aux bonbons, alors nous savons la ruiner comme suit : supposons qu'elle possède une toupie ; nous lui proposons d'échanger sa toupie contre des billes pour le prix d'un euro, ce qu'elle accepte. Puis nous lui offrons des bonbons contre ses billes, toujours pour le prix d'un euro, ce qu'elle accepte encore. Enfin nous lui proposons une toupie contre ses bonbons, pour le prix d'un euro. À l'issue du cycle, elle a non seulement dépensé trois euros pour rien, mais pire, cela peut continuer indéfiniment. Les préférences sont normalement transitives, mais celles de Marie ne le sont pas. Marie est irrationnelle, car elle viole ce principe.
+
+Nous pouvons aussi être irrationnels dans nos jugements, notamment probabilistes. Sachant que c'est en Scandinavie que la proportion de blonds aux yeux bleus est la plus grande, demandons-nous ce qui est le plus probable quand on rencontre un Scandinave : 
+
+1) Il a les cheveux blonds ; 
+2) Il a les cheveux blonds et les yeux bleus ; 
+3) Il a les cheveux blonds et n'a pas les yeux bleus.
+
+Si vous avez choisi l'option 2, vous faites partie de la majorité, mais vous avez tort ; vous venez de violer un des axiomes fondamentaux de la théorie des probabilités selon lequel la probabilité de la conjonction de deux événements est inférieure ou égale à celle de n'importe lequel de ces événements. L'option 1 est donc la plus probable.
+
+La cause est entendue, nous ne sommes pas toujours logiques. Quelles en sont les raisons ?
+Les théoriciens s’accordent pour reconnaître le rôle prépondérant de la capacité de la «mémoire de travail», composante de la mémoire qui se charge de stocker les informations juste le temps de les traiter, par exemple pour retenir une adresse avant de la noter, ce qui est coûteux et source d’erreurs
+: rappelons-nous l’anecdote récurrente de la lettre qui commence par 
+
+«Vous n’êtes pas sans ignorer que...» 
+
+pour 
+
+«Vous n’êtes pas sans savoir que...». 
+
+C’est ainsi que notre déclaration d’impôts nous embrouille: par des négations.
+
+

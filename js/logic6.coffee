@@ -12,6 +12,8 @@
     $(".sA").text " #{A}s "
     $(".sB").text " #{B}s "
     $(".sC").text " #{C}s "
+    $(".sxB").text " #{B}s "
+    $(".sxC").text " #{C}s "
     resoudreSyll()
     
   resoudreSyll = ->
