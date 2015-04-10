@@ -6,13 +6,13 @@
 
   ordre = [[0, 1, 1, 2], [0, 1, 2, 1], [0, 1, 1, 2], [0, 1, 2, 1], [1, 0, 2, 1], [0, 1, 2, 1]];
 
-  qA = ["Tous les", "Tous les", "Quelques", "Quelques", "Aucun des", "Quelques"];
+  qA = ["Tout", "Tout", "Quelque", "Quelque", "Aucun", "Quelque"];
 
-  rB = ["sont des", "sont des", "sont des", "sont des", "ne sont des", "ne sont pas des"];
+  rB = ["est", "est", "est", "est", "n'est", "n'est pas"];
 
-  qB = ["tous les", "aucun des", "tous les", "aucun des", "tous les", "tous les"];
+  qB = ["tout", "aucun", "tout", "aucun", "tout", "tout"];
 
-  rC = ["sont des", "ne sont des", "sont", "ne sont des", "sont des", "sont des"];
+  rC = ["est", "n'est", "est", "n'est", "est", "est"];
 
   A = ["suspect", "policier", "juge", "avocat", "chauffeur", "majordome", "détective", "greffier"];
 

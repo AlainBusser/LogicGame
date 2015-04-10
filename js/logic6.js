@@ -8,77 +8,77 @@
 
   trad = ["non-", ""];
 
-  ref1 = ["Tous les", "sont des", "Tous les", "sont des"], s1 = ref1[0], s2 = ref1[1], s3 = ref1[2], s4 = ref1[3];
+  ref1 = ["Tout", "est", "Tout", "est"], s1 = ref1[0], s2 = ref1[1], s3 = ref1[2], s4 = ref1[3];
 
   faireQCM = function() {
-    $(".sA").text(" " + A + "s ");
-    $(".sB").text(" " + B + "s ");
-    $(".sC").text(" " + C + "s ");
-    $(".sxB").text(" " + B + "s ");
-    $(".sxC").text(" " + C + "s ");
+    $(".sA").text(" " + A + " ");
+    $(".sB").text(" " + B + " ");
+    $(".sC").text(" " + C + " ");
+    $(".sxB").text(" " + B + " ");
+    $(".sxC").text(" " + C + " ");
     return resoudreSyll();
   };
 
   resoudreSyll = function() {
     var solution;
     solution = "On ne peut pas conclure";
-    if (s1 === "Tous les") {
-      if (s2 === "sont des") {
-        if (s3 === "Tous les") {
-          if (s4 === "sont des") {
-            $(".sxB").text(" " + B + "s ");
-            $(".sxC").text(" " + C + "s ");
-            solution = "Tous les " + A + "s sont des " + C + "s";
+    if (s1 === "Tout") {
+      if (s2 === "est") {
+        if (s3 === "Tout") {
+          if (s4 === "est") {
+            $(".sxB").text(" " + B + " ");
+            $(".sxC").text(" " + C + " ");
+            solution = "Tout " + A + " est " + C;
           } else {
             solution = "Le deuxième verbe n'est pas bon";
           }
         } else {
-          if (s3 === "Aucuns des" && s4 === "ne sont des") {
-            $(".sxB").text(" " + C + "s ");
-            $(".sxC").text(" " + B + "s ");
-            solution = "Aucun des " + A + "s ne sont des " + C + "s";
+          if (s3 === "Aucun" && s4 === "n'est") {
+            $(".sxB").text(" " + C + " ");
+            $(".sxC").text(" " + B + " ");
+            solution = "Aucun " + A + "s n'est " + C;
           }
         }
       } else {
         solution = "Le premier verbe n'est pas bon";
       }
     }
-    if (s1 === "Quelques") {
-      if (s2 === "sont des") {
-        if (s3 === "Tous les") {
-          if (s4 === "sont des") {
-            $(".sxB").text(" " + B + "s ");
-            $(".sxC").text(" " + C + "s ");
-            solution = "Quelques " + A + "s sont des " + C + "s";
+    if (s1 === "Quelque") {
+      if (s2 === "est") {
+        if (s3 === "Tout") {
+          if (s4 === "est") {
+            $(".sxB").text(" " + B + " ");
+            $(".sxC").text(" " + C + " ");
+            solution = "Quelque " + A + " est " + C;
           } else {
             solution = "Le deuxième verbe n'est pas bon";
           }
         } else {
-          if (s3 === "Aucuns des" && s4 === "ne sont des") {
-            $(".sxB").text(" " + C + "s ");
-            $(".sxC").text(" " + B + "s ");
-            solution = "Quelques " + C + "s ne sont pas des " + A + "s";
+          if (s3 === "Aucun" && s4 === "n'est") {
+            $(".sxB").text(" " + C + " ");
+            $(".sxC").text(" " + B + " ");
+            solution = "Quelque " + C + " n'est pas " + A;
           }
         }
       } else {
         solution = "Le premier verbe n'est pas bon";
       }
     }
-    if (s3 === "Tous les") {
-      if (s4 === "sont des") {
-        if (s1 === "Aucuns des") {
-          if (s2 === "ne sont des") {
-            $(".sxB").text(" " + C + "s ");
-            $(".sxC").text(" " + B + "s ");
-            solution = "Aucuns des " + A + "s ne sont des " + C + "s";
+    if (s3 === "Tout") {
+      if (s4 === "est") {
+        if (s1 === "Aucun") {
+          if (s2 === "n'est") {
+            $(".sxB").text(" " + C + " ");
+            $(".sxC").text(" " + B + " ");
+            solution = "Aucun " + A + " n'est " + C;
           } else {
             solution = "Le premier verbe n'est pas bon";
           }
         } else {
-          if (s1 === "Quelques" && s2 === "ne sont pas des") {
-            $(".sxB").text(" " + C + "s ");
-            $(".sxC").text(" " + B + "s ");
-            solution = "Quelques " + A + "s ne sont pas des " + C + "s";
+          if (s1 === "Quelque" && s2 === "n'est pas") {
+            $(".sxB").text(" " + C + " ");
+            $(".sxC").text(" " + B + " ");
+            solution = "Quelque " + A + " n'est pas " + C;
           }
         }
       } else {

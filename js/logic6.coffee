@@ -4,66 +4,66 @@
   type = Math.floor(Math.random()*6)  # type de syllogisme
   [A,B,C] = ["machin","truc","chose"]  # les catégories socioprofessionnelles
   trad = ["non-",""]
-  [s1,s2,s3,s4] = ["Tous les","sont des","Tous les","sont des"]
+  [s1,s2,s3,s4] = ["Tout","est","Tout","est"]
   
   ############################## fabrication des syllogismes et de leurs solutions ##########
   
   faireQCM = ->
-    $(".sA").text " #{A}s "
-    $(".sB").text " #{B}s "
-    $(".sC").text " #{C}s "
-    $(".sxB").text " #{B}s "
-    $(".sxC").text " #{C}s "
+    $(".sA").text " #{A} "
+    $(".sB").text " #{B} "
+    $(".sC").text " #{C} "
+    $(".sxB").text " #{B} "
+    $(".sxC").text " #{C} "
     resoudreSyll()
     
   resoudreSyll = ->
     solution = "On ne peut pas conclure"
-    if s1 is "Tous les"
-      if s2 is "sont des"
-        if s3 is "Tous les"
-          if s4 is "sont des"
-            $(".sxB").text " #{B}s "
-            $(".sxC").text " #{C}s "
-            solution = "Tous les #{A}s sont des #{C}s"
+    if s1 is "Tout"
+      if s2 is "est"
+        if s3 is "Tout"
+          if s4 is "est"
+            $(".sxB").text " #{B} "
+            $(".sxC").text " #{C} "
+            solution = "Tout #{A} est #{C}"
           else
             solution = "Le deuxième verbe n'est pas bon"
         else
-          if s3 is "Aucuns des" and s4 is "ne sont des"
-            $(".sxB").text " #{C}s "
-            $(".sxC").text " #{B}s "
-            solution = "Aucun des #{A}s ne sont des #{C}s"
+          if s3 is "Aucun" and s4 is "n'est"
+            $(".sxB").text " #{C} "
+            $(".sxC").text " #{B} "
+            solution = "Aucun #{A}s n'est #{C}"
       else
         solution = "Le premier verbe n'est pas bon"
-    if s1 is "Quelques"
-      if s2 is "sont des"
-        if s3 is "Tous les"
-          if s4 is "sont des"
-            $(".sxB").text " #{B}s "
-            $(".sxC").text " #{C}s "
-            solution = "Quelques #{A}s sont des #{C}s"
+    if s1 is "Quelque"
+      if s2 is "est"
+        if s3 is "Tout"
+          if s4 is "est"
+            $(".sxB").text " #{B} "
+            $(".sxC").text " #{C} "
+            solution = "Quelque #{A} est #{C}"
           else
             solution = "Le deuxième verbe n'est pas bon"
         else
-          if s3 is "Aucuns des" and s4 is "ne sont des"
-            $(".sxB").text " #{C}s "
-            $(".sxC").text " #{B}s "
-            solution = "Quelques #{C}s ne sont pas des #{A}s"
+          if s3 is "Aucun" and s4 is "n'est"
+            $(".sxB").text " #{C} "
+            $(".sxC").text " #{B} "
+            solution = "Quelque #{C} n'est pas #{A}"
       else
         solution = "Le premier verbe n'est pas bon"
-    if s3 is "Tous les"
-      if s4 is "sont des"
-        if s1 is "Aucuns des"
-          if s2 is "ne sont des"
-            $(".sxB").text " #{C}s "
-            $(".sxC").text " #{B}s "
-            solution = "Aucuns des #{A}s ne sont des #{C}s"
+    if s3 is "Tout"
+      if s4 is "est"
+        if s1 is "Aucun"
+          if s2 is "n'est"
+            $(".sxB").text " #{C} "
+            $(".sxC").text " #{B} "
+            solution = "Aucun #{A} n'est #{C}"
           else
             solution = "Le premier verbe n'est pas bon"
         else
-          if s1 is "Quelques" and s2 is "ne sont pas des"
-            $(".sxB").text " #{C}s "
-            $(".sxC").text " #{B}s "
-            solution = "Quelques #{A}s ne sont pas des #{C}s"
+          if s1 is "Quelque" and s2 is "n'est pas"
+            $(".sxB").text " #{C} "
+            $(".sxC").text " #{B} "
+            solution = "Quelque #{A} n'est pas #{C}"
       else
         solution = "Le deuxième verbe n'est pas bon"
     solution += "."

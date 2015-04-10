@@ -6,13 +6,13 @@
 
   ordre = [[0, 1, 1, 2], [0, 1, 2, 1], [0, 1, 1, 2], [0, 1, 2, 1], [1, 0, 2, 1], [0, 1, 2, 1]];
 
-  qA = ["Tous les", "Tous les", "Quelques", "Quelques", "Aucun des", "Quelques"];
+  qA = ["Tout", "Tout", "Quelque", "Quelque", "Aucun", "Quelque"];
 
-  rB = ["sont des", "sont des", "sont des", "sont des", "ne sont des", "ne sont pas des"];
+  rB = ["est", "est", "est", "est", "n'est", "n'est pas"];
 
-  qB = ["tous les", "aucun des", "tous les", "aucun des", "tous les", "tous les"];
+  qB = ["tout", "aucun", "tout", "aucun", "tout", "tout"];
 
-  rC = ["sont des", "ne sont des", "sont", "ne sont des", "sont des", "sont des"];
+  rC = ["est", "n'est", "est", "n'est", "est", "est"];
 
   A = ["suspect", "policier", "juge", "avocat", "chauffeur", "majordome", "détective", "greffier"];
 
@@ -61,7 +61,7 @@
           if (milieu === 1) {
             textsortie = "Le dernier jeton code le fait qu'aucun " + trad[fin] + C[aleat[2]] + " n'est " + B[aleat[1]];
           } else {
-            textsortie = "Le dernier jeton code le fait que tous les " + trad[fin] + C[aleat[2]] + "s sont " + B[aleat[1]] + "s";
+            textsortie = "Le dernier jeton code le fait que tout " + trad[fin] + C[aleat[2]] + " est " + B[aleat[1]];
           }
         } else {
           if (debut === 1) {

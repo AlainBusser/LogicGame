@@ -5,10 +5,10 @@
   aleat = [0,0,0]  # les catégories socioprofessionnelles
   ordre = [[0,1,1,2],[0,1,2,1],[0,1,1,2],[0,1,2,1],[1,0,2,1],[0,1,2,1]] # ordre dans lequel écrire les catégories dans l'énoncé
   # 6 catégories de syllogismes
-  qA = ["Tous les","Tous les","Quelques","Quelques","Aucun des","Quelques"]
-  rB = ["sont des","sont des","sont des","sont des","ne sont des","ne sont pas des"]
-  qB = ["tous les","aucun des","tous les","aucun des","tous les","tous les"]
-  rC = ["sont des","ne sont des","sont","ne sont des","sont des","sont des"]
+  qA = ["Tout","Tout","Quelque","Quelque","Aucun","Quelque"]
+  rB = ["est","est","est","est","n'est","n'est pas"]
+  qB = ["tout","aucun","tout","aucun","tout","tout"]
+  rC = ["est","n'est","est","n'est","est","est"]
   # 8 catégories socioprofessionnelles, on peut augmenter
   A = ["suspect","policier","juge","avocat","chauffeur","majordome","détective","greffier"]
   B = ["noir","arabe","étranger","bavard","fumeur","muet","gangster","politicien"]
@@ -54,10 +54,10 @@
             if milieu is 1 # on est à gauche du tableau
               textsortie = "Le dernier jeton code le fait qu'aucun #{A[aleat[0]]} n'est #{B[aleat[1]]}"
             else
-              textsortie = "Le dernier jeton code le fait que tous les #{A[aleat[0]]}s sont #{B[aleat[1]]}s"
+              textsortie = "Le dernier jeton code le fait que tout #{A[aleat[0]]} est #{B[aleat[1]]}"
           else
             if milieu is 1 # on est à gauche du tableau
-              textsortie = "Le dernier jeton code le fait que tous les #{B[aleat[1]]}s sont #{A[aleat[0]]}s"
+              textsortie = "Le dernier jeton code le fait que tout #{B[aleat[1]]} est #{A[aleat[0]]}"
             else
               textsortie = "Le dernier jeton code le fait que tout le monde est #{A[aleat[0]]} ou #{B[aleat[1]]}"
         else # si le jeton n'est pas gris c'est qu'il est rouge

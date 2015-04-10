@@ -43,13 +43,13 @@
                     </header>
                     <section>
                         <h2>Le plateau de jeu</h2>
-                      <p>Le carré central représente les <input class="entree" type="text" id="eB" value="truc">s.</p>
+                      <p>Le carré central représente la notion de <input class="entree" type="text" id="eB" value="truc">.</p>
                           <table>
                             <tr>
                               <td></td>
                               <td>
                                 <table><tr>
-                                  <td class="carre"><input class="entree" id="eC" value="chose">s</td>
+                                  <td class="carre"><input class="entree" id="eC" value="chose"></td>
                                   <td class="carre">   pas <span class="sC"></span></td></tr>
                                 </table>
                               </td>
@@ -57,7 +57,7 @@
                           <tr>
                             <td>
                               <table>
-                                <tr><td class="carre"><input class="entree" id="eA" value="machin">s</td></tr>
+                                <tr><td class="carre"><input class="entree" id="eA" value="machin"></td></tr>
                                 <tr><td class="carre">pas <span class="sA"></span></td></tr>
                               </table>
                           <td>
@@ -106,6 +106,35 @@
                       <div class="jeton gris"></div>
                       <div class="jeton gris"></div>
                       <div class="jeton gris"></div>
+                      <p></p>
+                          <table>
+                            <tr>
+                              <td></td>
+                              <td>
+                                <table><tr>
+                                  <td class="carre"><input class="entree" id="eC" value="chose"></td>
+                                  <td class="carre">   pas <span class="sC"></span></td></tr>
+                                </table>
+                              </td>
+                            </tr>
+                          <tr>
+                            <td>
+                              <table>
+                                <tr><td class="carre"><input class="entree" id="eA" value="machin"></td></tr>
+                                <tr><td class="carre">pas <span class="sA"></span></td></tr>
+                              </table>
+                          <td>
+                            <table>
+                              <tr>
+                                <td class="cellule nord sud est ouest"></td>
+                                <td class="cellule nord sud est ouest"></td>
+                              </tr>
+                              <tr>
+                                <td class="cellule nord sud est ouest"></td>
+                                <td class="cellule nord sud est ouest"></td>
+                              </tr>
+                            </table>
+                      </td></tr></table>
                     </section>
                     <footer>
                       <h5 id="sortie"></h5>
@@ -117,28 +146,28 @@
                   <ol>
                     <li>
                       <select id="choixA">
-                        <option id="cA1" selected="seleted">Tous les</option>
-                        <option id="cA2">Quelques</option>
-                        <option id="cA3">Aucuns des</option>
+                        <option id="cA1" selected="seleted">Tout</option>
+                        <option id="cA2">Quelque</option>
+                        <option id="cA3">Aucun</option>
                       </select>
                        <span class="sA"></span> 
                       <select id="verbe1">
-                        <option id="vA1" selected="selected">sont des</option>
-                        <option id="vA2">ne sont pas des</option>
-                        <option id="vA3">ne sont des</option>
+                        <option id="vA1" selected="selected">est</option>
+                        <option id="vA2">n'est pas</option>
+                        <option id="vA3">n'est</option>
                       </select>
                       <span class="sB"></span>.</li>
                     <li>
                       <select id="choixB">
-                        <option id="cB1" seleted="selected">Tous les</option>
-                        <option id="cB2">Quelques</option>
-                        <option id="cB3">Aucuns des</option>
+                        <option id="cB1" seleted="selected">Tout</option>
+                        <option id="cB2">Quelque</option>
+                        <option id="cB3">Aucun</option>
                       </select>
                       <span class="sxB"></span>
                       <select id="verbe2">
-                        <option id="vB1" selected="selected">sont des</option>
-                        <option id="vB2">ne sont pas des</option>
-                        <option id="vB3">ne sont des</option>
+                        <option id="vB1" selected="selected">est</option>
+                        <option id="vB2">n'est pas</option>
+                        <option id="vB3">n'est</option>
                       </select>
                       <span class="sxC"></span>.</li>
                   </ol>

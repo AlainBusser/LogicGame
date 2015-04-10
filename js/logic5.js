@@ -8,13 +8,13 @@
 
   ordre = [[0, 1, 1, 2], [0, 1, 2, 1], [0, 1, 1, 2], [0, 1, 2, 1], [1, 0, 2, 1], [0, 1, 2, 1]];
 
-  qA = ["Tous les", "Tous les", "Quelques", "Quelques", "Aucun des", "Quelques"];
+  qA = ["Tout", "Tout", "Quelque", "Quelque", "Aucun", "Quelque"];
 
-  rB = ["sont des", "sont des", "sont des", "sont des", "ne sont des", "ne sont pas des"];
+  rB = ["est", "est", "est", "est", "n'est", "n'est pas"];
 
-  qB = ["tous les", "aucun des", "tous les", "aucun des", "tous les", "tous les"];
+  qB = ["tout", "aucun", "tout", "aucun", "tout", "tout"];
 
-  rC = ["sont des", "ne sont des", "sont", "ne sont des", "sont des", "sont des"];
+  rC = ["est", "n'est", "est", "n'est", "est", "est"];
 
   A = ["suspect", "policier", "juge", "avocat", "chauffeur", "majordome", "détective", "greffier"];
 
@@ -24,22 +24,22 @@
 
   liste = [A, B, C];
 
-  sol1 = ["Tous les", "Aucun des", "Quelques", "Quelques", "Aucun des", "Quelques"];
+  sol1 = ["Tout", "Aucun", "Quelque", "Quelque", "aucun", "Quelque"];
 
-  sol2 = ["sont des", "ne sont des", "sont des", "ne sont pas des", "ne sont des", "ne sont pas des"];
+  sol2 = ["est", "n'est", "est", "n'est pas", "n'est", "n'est pas"];
 
   trad = ["non-", ""];
 
   faireQCM = function() {
     var i, option;
     aleat = [Math.floor(Math.random() * 8), Math.floor(Math.random() * 8), Math.floor(Math.random() * 8)];
-    $("#probleme1").text(qA[type] + " " + liste[ordre[type][0]][aleat[ordre[type][0]]] + "s " + rB[type] + " " + liste[ordre[type][1]][aleat[ordre[type][1]]] + "s");
-    $("#probleme2").text(qB[type] + " " + liste[ordre[type][2]][aleat[ordre[type][2]]] + "s " + rC[type] + " " + liste[ordre[type][3]][aleat[ordre[type][3]]] + "s");
-    $(".sA").text(" " + A[aleat[0]] + "s ");
-    $(".sB").text(" " + B[aleat[1]] + "s ");
-    $(".sC").text(" " + C[aleat[2]] + "s ");
+    $("#probleme1").text(qA[type] + " " + liste[ordre[type][0]][aleat[ordre[type][0]]] + " " + rB[type] + " " + liste[ordre[type][1]][aleat[ordre[type][1]]]);
+    $("#probleme2").text(qB[type] + " " + liste[ordre[type][2]][aleat[ordre[type][2]]] + " " + rC[type] + " " + liste[ordre[type][3]][aleat[ordre[type][3]]]);
+    $(".sA").text(" " + A[aleat[0]]);
+    $(".sB").text(" " + B[aleat[1]]);
+    $(".sC").text(" " + C[aleat[2]]);
     for (option = i = 0; i <= 3; option = ++i) {
-      $("#o" + option).text(sol1[option] + " " + A[aleat[0]] + "s " + sol2[option] + " " + C[aleat[2]] + "s");
+      $("#o" + option).text(sol1[option] + " " + A[aleat[0]] + " " + sol2[option] + " " + C[aleat[2]]);
     }
     return true;
   };
@@ -56,10 +56,10 @@
         if (choix === 4) {
           return alert("Si, si, ce syllogisme a une solution !");
         } else {
-          if (type === choix || (type > 3 && type === choix + 2)) {
-            return alert("Bravo, la conclusion est effectivement que : \n " + sol1[choix] + " " + A[aleat[0]] + "s " + sol2[choix] + " " + C[aleat[2]] + "s");
+          if (type === choix || (type === 4 && choix === 1) || (type === 5 && choix === 3)) {
+            return alert("Bravo, la conclusion est effectivement que : \n " + sol1[choix] + " " + A[aleat[0]] + " " + sol2[choix] + " " + C[aleat[2]]);
           } else {
-            return alert("Non, la conclusion du syllogisme n'est pas que :\n " + sol1[choix] + " " + A[aleat[0]] + "s " + sol2[choix] + " " + C[aleat[2]] + "s");
+            return alert("Non, la conclusion du syllogisme n'est pas que :\n " + sol1[choix] + " " + A[aleat[0]] + " " + sol2[choix] + " " + C[aleat[2]]);
           }
         }
       }
@@ -82,7 +82,7 @@
             if (milieu === 1) {
               textsortie = "Vous venez de coder le fait qu'aucun " + trad[debut] + A[aleat[0]] + " " + trad[fin] + C[aleat[2]] + " n'est " + B[aleat[1]];
             } else {
-              textsortie = "Vous venez de coder le fait que tous les " + trad[debut] + A[aleat[0]] + "s " + trad[fin] + C[aleat[2]] + "s sont " + B[aleat[1]] + "s";
+              textsortie = "Vous venez de coder le fait que tout " + trad[debut] + A[aleat[0]] + " " + trad[fin] + C[aleat[2]] + "s est " + B[aleat[1]];
             }
           }
         } else {
@@ -90,9 +90,9 @@
             textsortie = "N'auriez-vous pas plutôt dû utiliser un jeton gris ?";
           } else {
             if (debut > 1) {
-              textsortie = "Vous venez de coder le fait que quelques " + trad[fin] + C[aleat[2]] + "s ne sont pas des " + B[aleat[1]] + "s";
+              textsortie = "Vous venez de coder le fait que quelque " + trad[fin] + C[aleat[2]] + " n'est pas " + B[aleat[1]];
             } else {
-              textsortie = "Vous venez de coder le fait que quelques " + trad[debut] + A[aleat[0]] + "s ne sont pas des " + B[aleat[1]] + "s";
+              textsortie = "Vous venez de coder le fait que quelque " + trad[debut] + A[aleat[0]] + " n'est pas " + B[aleat[1]];
             }
           }
         }
