@@ -1,6 +1,6 @@
 # LogicGame
-Lewis Carroll's "logic game" with the 9 red and gray counters, simulated on a responsive device.
+jeu de Lewis Carroll avec 9 jetons touges et gris
 
-The book is here: http://www.gutenberg.org/files/4763/4763-h/4763-h.htm
+Le mode d'emploi en anglais: http://www.gutenberg.org/files/4763/4763-h/4763-h.htm
 
-The project is made for Institut de Recherche pour l'Enseignement des Mathématiques from Reunion Island, so it is in French...
+Institut de Recherche pour l'Enseignement des Mathématiques de La Réunion
